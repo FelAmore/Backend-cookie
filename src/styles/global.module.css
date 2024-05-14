@@ -1,0 +1,257 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background: #F9F2ED;
+    color: #F2F2F2;
+    min-height: 100vh;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+
+/* Task styles */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F9F2ED;
+  border: 1px solid #ff71b2;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.task p {
+    font-size: 18px; /* Larger font size for task name */
+    line-height: 24px;
+    color: #ffa0ad;
+    margin-right: auto;
+}
+
+.task p.taskDescription {
+    font-size: 14px; /* Smaller font size for task description */
+    line-height: 18px;
+    color: #ffa0ad;
+}
+
+.taskDetails {
+  flex-grow: 1;
+  margin-left: 16px; /* Adjust margin as needed */
+}
+
+.taskButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+p.textCompleted {
+    color: #ffa0ad;
+    text-decoration: line-through;
+}
+
+.checkContainer {
+  width: 18px;
+  height: 18px;
+}
+
+.checkContainer button {
+  background: none;
+  border: none;
+}
+
+.checkContainer div {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    border: 2px solid #509be1;
+}
+
+.checkContainer svg {
+  width: 100%;
+  height: 100%;
+  color: #509be1;
+}
+
+.editButton {
+    background: none;
+    border: none;
+    color: #509be1;
+    padding: 0; /* Remove default padding */
+    cursor: pointer;
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    color: #509be1;
+    padding: 0; /* Remove default padding */
+    cursor: pointer;
+}
+
+
+/* Tasks styles */
+.tasks {
+    width: 100%;
+    max-width: 736px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 0 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header p {
+    color: #509be1;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header span {
+    background: #ffa0ad;
+    color: #F9F2ED;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filteredContainer {
+    position: relative;
+}
+
+.filteredContainer select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 140px;
+    padding: 4px 10px;
+    border: 1px solid #ffa0ad;
+    border-radius: 4px;
+    background-color: #509be1;
+    font-size: 12px;
+    font-weight: 500;
+    color: #F9F2ED;
+}
+
+.filteredContainer::after {
+    content: '\25BE'; /* Unicode for down arrow */
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 10px;
+    font-size: 16px;
+    pointer-events: none;
+    color: #F9F2ED;
+}
+
+.filteredContainer select:focus {
+    outline: none;
+    border-color: #4EA8DE; /* Example focus style */
+}
+
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fbf7f4;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid ##72afe7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ff71b2;
+  border-radius: 4px;
+  color: #ff71b2;
+  background-color: #fdfbf9;
+}
+
+.modal textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ff71b2;
+  border-radius: 4px;
+  color: #ff71b2;
+  background-color: #fdfbf9;
+}
+
+.modal button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button.update {
+  background-color: #509be1;
+  color:  #f9f2ed;
+  margin-left: 10px;
+}
+
+.modal button.cancel {
+  background-color: #ffa0ad;
+  color:  #f9f2ed;
+}
+
+/* Auth styles */
+.auth {
+    width: 90%;
+    max-width: 460px;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 0px; /* Keep it minimal */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content {
+    width: 90%;
+    max-width: 430px;
+    margin-top: 0px;;
+}
+
+/*
+light blue = #d3e9ff
+light pink = #ffd5d5
+salmon pink = #ffa0ad
+blue = #509be1
+pink = #ff71b2
+bg color = #f9f2ed
+*/
